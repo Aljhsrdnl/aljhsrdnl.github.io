@@ -21,6 +21,12 @@ const decDis= ["1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1
 const janDistance = ["1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","N/A","N/A","N/A","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","N/A","N/A","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","N/A","N/A","N/A","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","N/A","N/A","N/A","N/A","N/A"];
 const febDistance = ["1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km"];
 
+const octTime = ["15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","30 mins","30 mins","30 mins","30 mins","30 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","15 mins","15 mins","15 mins","30 mins","5 mins","30 mins","30 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","30 mins","30 mins","30 mins","30 mins","45 mins","5 mins"];
+const novTime = ["15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","15 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","10 mins","10 mins","10 mins","10 mins"];
+const decTime= ["30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","15 mins","15 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","45 mins","45 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins","10 mins"];
+const janTime = ["30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","10 mins","10 mins","10 mins","30 mins","30 mins","30 mins","30 mins","30 mins","45 mins","45 mins","30 mins","30 mins","30 mins","30 mins","30 mins","10 mins","10 mins","10 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","10 mins","10 mins","10 mins","10 mins","10 mins"];
+const febTime = ["30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins","30 mins"];
+
 
 const decDiv = document.querySelector(".decRow");
 const decActivity = ["Walking"];
@@ -70,6 +76,16 @@ function decCard() {
     disTitle.classList.add("text-dark");
     disTitle.innerText = decDis[i];
     distance.appendChild(disTitle);
+    //card time
+    const time = document.createElement("p");
+    time.classList.add("card-font-size", "my-0", "text-primary");
+    time.innerText = "Time: ";
+    cardBody.appendChild(time);
+    //card time title
+    const timeTitle = document.createElement("span");
+    timeTitle.classList.add("text-dark");
+    timeTitle.innerText = decTime[i];
+    time.appendChild(timeTitle);
     //card Date
     const date = document.createElement("p");
     date.classList.add("card-font-size", "my-0", "text-primary");
@@ -113,6 +129,16 @@ function octCard() {
     disTitle.classList.add("text-dark");
     disTitle.innerText = octDistance[i];
     distance.appendChild(disTitle);
+    //card time
+    const time = document.createElement("p");
+    time.classList.add("card-font-size", "my-0", "text-primary");
+    time.innerText = "Time: ";
+    cardBody.appendChild(time);
+    //card time title
+    const timeTitle = document.createElement("span");
+    timeTitle.classList.add("text-dark");
+    timeTitle.innerText = octTime[i];
+    time.appendChild(timeTitle);
     //card Date
     const date = document.createElement("p");
     date.classList.add("card-font-size", "my-0", "text-primary");
@@ -154,6 +180,16 @@ function novCard() {
     disTitle.classList.add("text-dark");
     disTitle.innerText = novDistance[i];
     distance.appendChild(disTitle);
+    //card time
+    const time = document.createElement("p");
+    time.classList.add("card-font-size", "my-0", "text-primary");
+    time.innerText = "Time: ";
+    cardBody.appendChild(time);
+    //card time title
+    const timeTitle = document.createElement("span");
+    timeTitle.classList.add("text-dark");
+    timeTitle.innerText = novTime[i];
+    time.appendChild(timeTitle);
     //card Date
     const date = document.createElement("p");
     date.classList.add("card-font-size", "my-0", "text-primary");
@@ -196,6 +232,16 @@ function janCard () {
     disTitle.classList.add("text-dark");
     disTitle.innerText = janDistance[i];
     distance.appendChild(disTitle);
+    //card time
+    const time = document.createElement("p");
+    time.classList.add("card-font-size", "my-0", "text-primary");
+    time.innerText = "Time: ";
+    cardBody.appendChild(time);
+    //card time title
+    const timeTitle = document.createElement("span");
+    timeTitle.classList.add("text-dark");
+    timeTitle.innerText = janTime[i];
+    time.appendChild(timeTitle);
     //card Date
     const date = document.createElement("p");
     date.classList.add("card-font-size", "my-0", "text-primary");
@@ -232,6 +278,16 @@ function febCard () {
     distance.classList.add("card-font-size", "my-0", "text-primary");
     distance.innerText = "Distance: ";
     cardBody.appendChild(distance);
+    //card time
+    const time = document.createElement("p");
+    time.classList.add("card-font-size", "my-0", "text-primary");
+    time.innerText = "Time: ";
+    cardBody.appendChild(time);
+    //card time title
+    const timeTitle = document.createElement("span");
+    timeTitle.classList.add("text-dark");
+    timeTitle.innerText = febTime[i];
+    time.appendChild(timeTitle);
     //card distance title
     const disTitle = document.createElement("span");
     disTitle.classList.add("text-dark");

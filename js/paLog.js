@@ -23,7 +23,7 @@ const febDistance = ["1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 km","1.5 
 
 
 const decDiv = document.querySelector(".decRow");
-
+const decActivity = ["Walking"];
 
 for (var i = 0; i < octPics.length; i++) {
     octCard();
